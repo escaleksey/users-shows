@@ -1,0 +1,43 @@
+.container {
+    margin: 40px auto 0;
+}
+
+.page_header {
+    text-align: center;
+}
+
+.news_item {
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.button_block {
+    margin-top: 5px;
+}
+
+.info_block {
+    margin: 5px 0;
+    font-style: italic;
+}
+
+.links_block {
+    min-width: 100px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.link_item {
+    display: block;
+    color: rgba(0,0,0,.9);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.link_item:hover {
+    color: rgb(247, 192, 91);
+    text-decoration: none;
+}
+
+.work_log_content {
+    margin-top: 20px;
+}

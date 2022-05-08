@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 class="page_header">Works log</h1>
+    <a href="/add_job" class="btn btn-secondary">Добавить работу</a>
+    {% for job in jobs %}
+        <div class="work_log_content">
+            <h5>Action #{{ loop.index }}</h5>
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Title of activity</th>
+                            <th scope="col">Team leader</th>
+                            <th scope="col">Duration</th>
+                            <th scope="col">list of collobarators</th>
+                            <th scope="col">is finished</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="work_table_item">{{ job.job }}</th>
+                            <th class="work_table_item">{{ job.team_leader }}</th>
+                            <th class="work_table_item">{{ job.work_size }}</th>
+                            <th class="work_table_item">{{ job.collaborators }}</th>
+                            {% if job.is_finished %}
+                                <th class="work_table_item green_item">Is finished</th>
+                            {% else %}
+                                <th class="work_table_item red_item">Is not finished</th>
+                            {% endif %}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    {% endfor %}
+
+{% endblock %}
